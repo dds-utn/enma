@@ -3,6 +3,8 @@ class CreateCourses < ActiveRecord::Migration
     create_table :courses do |t|
       t.string :code
       t.string :description
+      t.string :teacher
+      t.string :code_id
     end
     add_belongs_to :users, :course
   end
