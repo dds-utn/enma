@@ -67,7 +67,7 @@ class User < ActiveRecord::Base
 
           group_code = Group.find_by(id: user.group_id).code
           course_code = Course.find_by(id: user.course_id).code
-          team_name = "2015-#{course_code}-group-#{group_code}"
+          team_name = "2016-#{course_code}-group-#{group_code}"
 
           add_user(team_name, user.nickname)
 
