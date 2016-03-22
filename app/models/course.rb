@@ -16,6 +16,11 @@ class Course < ActiveRecord::Base
   validates :teacher, presence: true
   validates :code_id, presence: true
 
+
+  def pretty
+    "#{self.code_id} - #{self.description} (#{self.teacher})"
+  end
+
   #
   # Class methods
   #
